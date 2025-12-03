@@ -1,5 +1,5 @@
 const BASE_PATH = window.location.hostname.includes("github.io")
-    ? "/PWA"
+    ? "/figuras_planas"
     : "";
 
 document.addEventListener("DOMContentLoaded", () => {
