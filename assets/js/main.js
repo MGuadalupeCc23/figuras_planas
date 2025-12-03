@@ -1,4 +1,4 @@
-const BASE_PATH = window.location.hostname.includes("github.io")
+/*const BASE_PATH = window.location.hostname.includes("github.io")
     ? "/figuras_planas"
     : "";
 
@@ -34,8 +34,8 @@ export async function loadFooter() {
   const response = await fetch(`${BASE_PATH}/partials/footer.html`);
   footer.innerHTML = await response.text();
 }
-
-/*document.addEventListener("DOMContentLoaded", () => {
+*/
+document.addEventListener("DOMContentLoaded", () => {
   // tu lógica nueva
   loadSideBar();
   loadFooter();
@@ -68,4 +68,4 @@ export async function loadFooter() {
   const footer = document.getElementById("footer");
   const response = await fetch(`${BASE_PATH}/partials/footer.html`);
   footer.innerHTML = await response.text();
-}*/
+}
