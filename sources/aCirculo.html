@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Áreas</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="icon" href="../icons/icono.ico" type="image/x-icon">
+    <script type="module" src="../../assets/js/main.js"></script>
+</head>
+
+<body>
+    <div id="sideBar"></div>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <section class="hero">
+            <h2>Bienvenido al módulo de Áreas</h2>
+            <p>Selecciona una figura geométrica en el menú lateral para ver su fórmula, explicación y ejemplo.</p>
+        </section>
+
+        <section class="hero">
+            <h2>Área del Círculo</h2>
+            El círculo es una figura plana formada por todos los puntos que están a la misma distancia del centro.
+            Esa distancia se llama radio (r). Su área se calcula usando la constante π, multiplicada por el radio al
+            cuadrado.
+        </section>
+
+        <!-- SECCIÓN TEÓRICA -->
+        <section class="theory">
+            <h3>Fórmula del área</h3>
+            <p class="formula">A = π · r²</p>
+            El área del círculo se obtiene multiplicando la constante π (aprox. 3.1416) por el radio elevado al
+            cuadrado.
+            El radio (r) es la distancia desde el centro del círculo hasta cualquier punto de la circunferencia.
+            Elevar el radio al cuadrado significa multiplicarlo por sí mismo: r × r.
+
+            <img src="../assets/img/circulo.png" class="formula-img">
+        </section>
+
+        <!-- GENERACIÓN AUTOMÁTICA DE EJERCICIOS -->
+        <section class="exercise-section">
+            <h3>Ejercicio interactivo</h3>
+
+            <div id="ejercicio-container"></div>
+
+            <button id="btn-nuevo">Generar otro ejercicio</button>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+    <script type="module">
+        import { AreaCirculoController } from "../assets/js/controllers/areaCirculoController.js";
+
+        const controller = new AreaCirculoController();
+        controller.mostrarEjercicio();
+
+        document.getElementById("btn-nuevo").onclick = () =>
+            controller.mostrarEjercicio();
+    </script>
+
+
+</body>
+
+</html>

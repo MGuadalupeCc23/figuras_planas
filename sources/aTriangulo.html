@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área del Triángulo</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="icon" href="../icons/icono.ico" type="image/x-icon">
+    <script type="module" src="../../assets/js/main.js"></script>
+</head>
+
+<body>
+    <div id="sideBar"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <section class="hero">
+            <h2>Bienvenido al módulo de Áreas</h2>
+            <p>Selecciona una figura geométrica en el menú lateral para ver su fórmula, explicación y ejemplo.</p>
+        </section>
+
+        <section class="hero">
+            <h2>Área del Triángulo</h2>
+            El triángulo es una figura plana formada por tres lados y tres ángulos.
+            Para obtener su área, se usa la base y la altura trazada a partir de ella, y el resultado se divide entre 2.
+        </section>
+
+        <section class="theory">
+            <h3>Fórmula del área</h3>
+            <p class="formula">A = (base · altura) / 2</p>
+            El triángulo ocupa la mitad del área que tendría un rectángulo con la misma base y altura.
+            Por eso se multiplica base por altura y luego se divide entre 2.
+
+            <img src="../assets/img/triangulo.jpg" class="formula-img">
+        </section>
+
+        <!-- GENERACIÓN AUTOMÁTICA DE EJERCICIOS -->
+        <section class="exercise-section">
+            <h3>Ejercicio interactivo</h3>
+
+            <div id="ejercicio-container"></div>
+
+            <button id="btn-nuevo">Generar otro ejercicio</button>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module">
+        import { AreaTrianguloController } from "../assets/js/controllers/areaTrianguloController.js";
+
+        const controller = new AreaTrianguloController();
+        controller.mostrarEjercicio();
+
+        document.getElementById("btn-nuevo").onclick = () =>
+            controller.mostrarEjercicio();
+    </script>
+</body>
+
+</html>

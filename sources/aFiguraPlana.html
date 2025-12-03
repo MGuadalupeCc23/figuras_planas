@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Áreas</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="icon" href="../icons/icono.ico" type="image/x-icon">
+    <script type="module" src="../../assets/js/main.js"></script>
+</head>
+
+<body>
+    <div id="sideBar"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <section class="hero">
+            <h2>Bienvenido al módulo de Áreas</h2>
+            <p>Selecciona una figura geométrica en el menú lateral para ver su fórmula, explicación y ejemplo.</p>
+        </section>
+
+        <section class="hero">
+            <h2>Área de las Figuras Planas</h2>
+            Este módulo reúne las fórmulas esenciales para calcular el área de las figuras planas
+            más comunes. Su objetivo es ayudarte a comprender cómo se determina el espacio que
+            ocupa cada figura utilizando sus dimensiones fundamentales, como lados, diagonales,
+            radio, base o altura. A través de la teoría, imágenes y ejercicios interactivos, podrás
+            reforzar tus conocimientos y aplicar correctamente cada fórmula según la figura
+            correspondiente.
+
+        </section>
+
+        <!-- SECCIÓN TEÓRICA -->
+        <section class="theory">
+            <h3>Fórmulas de área</h3>
+
+            <p class="formula"><strong>Cuadrado:</strong> A = lado²</p>
+            El área del cuadrado se obtiene multiplicando un lado por sí mismo. Como los cuatro
+            lados son de igual longitud, esta fórmula permite calcular de manera directa el espacio
+            total que ocupa la figura.
+
+            <p class="formula"><strong>Círculo:</strong> A = π · r²</p>
+            Para calcular el área del círculo se utiliza su radio (r), que es la distancia del centro
+            al borde. Al elevar el radio al cuadrado y multiplicarlo por π, obtenemos la medida del
+            espacio interior del círculo.
+
+            <p class="formula"><strong>Rectángulo:</strong> A = base · altura</p>
+            El área del rectángulo se encuentra multiplicando la base por la altura. La base
+            representa el ancho y la altura el largo vertical. El resultado indica cuántas unidades
+            cuadradas caben dentro del rectángulo.
+
+            <p class="formula"><strong>Rombo:</strong> A = (D · d) / 2</p>
+            En el rombo, las diagonales mayor (D) y menor (d) se cruzan en el centro dividiendo la
+            figura en cuatro triángulos congruentes. Multiplicar ambas diagonales y dividir entre 2
+            permite obtener el área total del rombo.
+
+            <p class="formula"><strong>Romboide:</strong> A = base · altura</p>
+            Aunque el romboide tiene lados inclinados y no forma ángulos rectos, su área se calcula
+            igual que la del rectángulo: multiplicando la base por la altura. La altura siempre es la
+            distancia perpendicular a la base, no el lado inclinado.
+
+            <p class="formula"><strong>Triángulo:</strong> A = (base · altura) / 2</p>
+            El triángulo representa la mitad de un rectángulo formado con la misma base y altura.
+            Por eso la fórmula divide entre 2 después de multiplicar base y altura.
+
+            <img src="../assets/img/figurasPlanas.png" class="formula-img">
+            En la imagen se muestran las figuras planas más estudiadas: cuadrado, círculo,
+            rectángulo, rombo, romboide y triángulo. Cada una tiene una fórmula particular
+            dependiendo de sus dimensiones características, ya sean lados, radio, diagonales o
+            alturas.
+        </section>
+
+        <!-- GENERACIÓN AUTOMÁTICA DE EJERCICIOS -->
+        <section class="exercise-section">
+            <h3>Ejercicio interactivo</h3>
+
+            <div id="ejercicio-container"></div>
+
+            <button id="btn-nuevo">Generar otro ejercicio</button>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module">
+        import { AreaFiguraPlanaController } from "../assets/js/controllers/areaFiguraPlanaController.js";
+
+        const controller = new AreaFiguraPlanaController();
+        controller.mostrarEjercicio();
+
+        document.getElementById("btn-nuevo").onclick = () =>
+            controller.mostrarEjercicio();
+    </script>
+
+</body>
+
+</html>

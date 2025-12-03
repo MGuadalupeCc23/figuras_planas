@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Área del Rectángulo</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="icon" href="../icons/icono.ico" type="image/x-icon">
+    <script type="module" src="../../assets/js/main.js"></script>
+</head>
+
+<body>
+    <div id="sideBar"></div>
+
+    <main class="main-content">
+        <section class="hero">
+            <h2>Bienvenido al módulo de Áreas</h2>
+            <p>Selecciona una figura geométrica en el menú lateral para ver su fórmula, explicación y ejemplo.</p>
+        </section>
+
+        <section class="hero">
+            <h2>Área del Rectángulo</h2>
+            El rectángulo tiene cuatro ángulos rectos y sus lados opuestos son iguales.
+            A diferencia del cuadrado, puede tener lados diferentes en largo y alto.
+            Su área se calcula multiplicando la base por la altura.
+        </section>
+
+        <section class="theory">
+            <h3>Fórmula del área</h3>
+            <p class="formula">A = base · altura</p>
+            El rectángulo se forma por un ancho (base) y un alto (altura).
+            Multiplicarlos nos da la cantidad de espacio interior.
+            Es equivalente a contar cuántos “cuadritos” caben dentro del rectángulo.
+
+            <img src="../assets/img/rectangulo.jpg" class="formula-img">
+        </section>
+
+        <!-- GENERACIÓN AUTOMÁTICA DE EJERCICIOS -->
+        <section class="exercise-section">
+            <h3>Ejercicio interactivo</h3>
+
+            <div id="ejercicio-container"></div>
+
+            <button id="btn-nuevo">Generar otro ejercicio</button>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module">
+        import { AreaRectanguloController } from "../assets/js/controllers/areaRectanguloController.js";
+
+        const controller = new AreaRectanguloController();
+        controller.mostrarEjercicio();
+
+        document.getElementById("btn-nuevo").onclick = () =>
+            controller.mostrarEjercicio();
+    </script>
+</body>
+
+</html>

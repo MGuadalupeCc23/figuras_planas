@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Áreas</title>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="icon" href="../icons/icono.ico" type="image/x-icon">
+    <script type="module" src="../../assets/js/main.js"></script>
+</head>
+
+<body>
+    <div id="sideBar"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <section class="hero">
+            <h2>Bienvenido al módulo de Áreas</h2>
+            <p>Selecciona una figura geométrica en el menú lateral para ver su fórmula, explicación y ejemplo.</p>
+        </section>
+
+        <section class="hero">
+            <h2>Área de los Polígonos Regulares</h2>
+            Un polígono regular es una figura geométrica en la que:
+
+            Todos los lados son iguales
+
+            Todos los ángulos interiores son iguales
+
+            Tiene simetría perfecta
+
+            Ejemplos: triángulo equilátero, cuadrado, pentágono, hexágono, octágono, etc.
+
+            Su área se calcula usando el perímetro (P) y la apotema (a), que es la distancia del centro a la mitad de un
+            lado.
+        </section>
+
+        <!-- SECCIÓN TEÓRICA -->
+        <section class="theory">
+            <h3>Fórmula del área</h3>
+            <p class="formula">A = (P · a) / 2</p>
+            <p class="explanation">
+                Donde:<br>
+                <strong>P</strong> = perímetro del polígono<br>
+                <strong>a</strong> = apotema<br>
+                Esta fórmula aplica a todos los polígonos regulares (triángulo equilátero, cuadrado, pentágono,
+                hexágono, etc.).
+            </p>
+            Funciona porque divide el polígono en pequeños triángulos iguales.
+            El perímetro representa la suma de todos los lados y la apotema la altura de esos triángulos.
+            Un polígono regular puede dividirse en varios triángulos iguales.
+            En esta fórmula:
+            P = perímetro (suma de todos los lados)
+            a = apotema (distancia desde el centro al punto medio de un lado)
+            La multiplicación P × a suma las áreas de todos esos triángulos, y dividir entre 2 da el área total.
+            Es una fórmula universal que sirve para:
+            - triángulo equilátero
+            - cuadrado
+            - pentágono
+            - hexágono
+            - octágono
+            - etc.
+
+            Siempre que sea regular (todos sus lados y ángulos iguales).
+
+            <img src="../assets/img/poligonsRegulares.png" class="formula-img">
+        </section>
+
+        <!-- GENERACIÓN AUTOMÁTICA DE EJERCICIOS -->
+        <section class="exercise-section">
+            <h3>Ejercicio interactivo</h3>
+
+            <div id="ejercicio-container"></div>
+
+            <button id="btn-nuevo">Generar otro ejercicio</button>
+        </section>
+
+    </main>
+
+    <div id="footer"></div>
+
+    <script type="module">
+        import { AreaPoligonosController } from "../assets/js/controllers/areaPoligonosController.js";
+
+        const controller = new AreaPoligonosController();
+        controller.mostrarEjercicio();
+
+        document.getElementById("btn-nuevo").onclick = () =>
+            controller.mostrarEjercicio();
+    </script>
+</body>
+
+</html>
