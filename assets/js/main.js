@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //Lógica del service worker
   const BASE_PATH = window.location.hostname.includes("github.io")
     ? //? "/PWA" // nombre exacto del repositorio
-      "/PWA" // nombre exacto del repositorio
+      "/figuras_planas" // nombre exacto del repositorio
     : ""; // en local (XAMPP)
 
   if ("serviceWorker" in navigator) {
