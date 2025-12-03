@@ -1,0 +1,82 @@
+/* ===========================
+   Estilos para módulos de área
+   =========================== */
+
+:root {
+    --color-bg: #f4f6f9;
+    --color-card: #ffffff;
+    --color-text: #333;
+    --color-accent: #4a6cf7;
+    --color-accent-hover: #3b56c2;
+    --radius: 14px;
+}
+
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+    font-family: "Poppins", sans-serif;
+}
+
+/* Contenido principal */
+.main-content {
+    padding: 2rem;
+}
+
+/* Titulares */
+h2, h3 {
+    color: var(--color-text);
+}
+
+/* Botón para generar ejercicios */
+.btn-area {
+    background: var(--color-accent);
+    border: none;
+    color: #fff;
+    padding: .7rem 1.4rem;
+    cursor: pointer;
+    border-radius: var(--radius);
+    transition: 0.2s;
+    font-size: 1rem;
+}
+
+.btn-area:hover {
+    background: var(--color-accent-hover);
+}
+
+/* Contenedor dinámico para los ejercicios */
+#ejercicio-container {
+    margin-top: 1.5rem;
+    background: var(--color-card);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* Inputs del ejercicio */
+.ejercicio-input {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.ejercicio-input input {
+    padding: .5rem;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    flex: 1;
+}
+
+.ejercicio-input button {
+    background: var(--color-accent);
+    border: none;
+    padding: .5rem 1rem;
+    color: #fff;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.ejercicio-input button:hover {
+    background: var(--color-accent-hover);
+}
